@@ -1,0 +1,154 @@
+@keyframes menu--show {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  @-webkit-keyframes menu--show {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  @keyframes menu--li--show {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0); }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); } }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+    display: none; }
+    .active .menu {
+      display: block;
+      animation: menu--show .4s ease-in-out;
+      -webkit-animation: menu--show .4s ease-in-out; }
+    .menu .menu__container {
+      width: 310px;
+      height: 380px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -225px;
+      margin-left: -155px;
+      z-index: 200; }
+      .menu .menu__container .nav li {
+        line-height: 26px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        margin: 40px auto; }
+        .menu .menu__container .nav li:hover {
+          opacity: 0.6; }
+        .active .menu .menu__container .nav li {
+          animation: menu--li--show .3s ease-in-out; }
+      .menu .menu__container .nav .nav--home, .menu .menu__container .nav .nav--goods, .menu .menu__container .nav .nav--event, .menu .menu__container .nav .nav--graphic {
+        text-indent: -9999px; }
+      .menu .menu__container .nav .nav--home {
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--home.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav .nav--goods {
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--goods.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav .nav--event {
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--event.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav .nav--graphic {
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--graphic.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav .nav--online a {
+        display: block;
+        text-indent: -9999px;
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--online.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav .nav--sanrio a {
+        display: block;
+        text-indent: -9999px;
+        background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--sanrio.png) no-repeat center center;
+        background-size: auto 100%; }
+      .menu .menu__container .nav__fukidashi li {
+        width: 78px;
+        height: 78px;
+        position: absolute; }
+        .menu .menu__container .nav__fukidashi li dl {
+          line-height: 1;
+          font-size: 17px;
+          text-align: center;
+          color: #000;
+          padding-top: 25px; }
+          .menu .menu__container .nav__fukidashi li dl dd {
+            font-size: 9px;
+            margin-top: 3px; }
+        .menu .menu__container .nav__fukidashi li.nav__fukidashi--goods {
+          top: 48px;
+          left: 4px;
+          background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--yellow.png) no-repeat;
+          background-size: 100% auto;
+          transform-origin: 100% 95%;
+          -webkit-transform-origin: 100% 95%;
+          animation: vertical3 2.4s ease-in-out infinite alternate; }
+        .menu .menu__container .nav__fukidashi li.nav__fukidashi--event {
+          top: 120px;
+          right: 0;
+          background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--blue.png) no-repeat;
+          background-size: 100% auto;
+          transform-origin: 0% 89%;
+          -webkit-transform-origin: 0% 89%;
+          animation: vertical3 2.4s ease-in-out infinite alternate;
+          animation-delay: 1s; }
+        .menu .menu__container .nav__fukidashi li.nav__fukidashi--graphic {
+          left: -17px;
+          top: 180px;
+          background: url(https://www.sanrio.co.jp/special/doraemon/assets/img/common/nav/nav--red.png) no-repeat;
+          background-size: 100% auto;
+          transform-origin: 100% 95%;
+          -webkit-transform-origin: 100% 95%;
+          animation: vertical3 2.4s ease-in-out infinite alternate;
+          animation-delay: 2s; }
+      .menu .menu__container .btn__close {
+        width: 54px;
+        height: 54px;
+        border: #000 solid 6px;
+        border-radius: 27px;
+        margin: 0 auto;
+        position: relative;
+        -webkit-transition-duration: 0.8s;
+        -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        -moz-transition-duration: 0.8s;
+        -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        transition-duration: 0.8s;
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+        .menu .menu__container .btn__close:hover {
+          cursor: pointer;
+          transform: rotate(360deg); }
+        .menu .menu__container .btn__close span {
+          position: absolute;
+          top: 18px;
+          left: 6px;
+          display: block;
+          width: 30px;
+          height: 0px;
+          border: #000 solid 3px;
+          border-radius: 3px; }
+          .menu .menu__container .btn__close span.close1 {
+            transform: rotate(45deg); }
+          .menu .menu__container .btn__close span.close2 {
+            transform: rotate(-45deg); }
+    .menu .menu__bg {
+      background: #a9e7fa;
+      opacity: 0.9;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100; }
+
+      html {  
+        scroll-behavior: smooth;  
+  }
